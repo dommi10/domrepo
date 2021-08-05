@@ -22,7 +22,7 @@ export async function getStaticProps(context) {
   const {
     params: { page },
   } = context
-  const posts = await getAllFilesFrontMatter('blog')
+  const posts = await getAllFilesFrontMatter('blog', context.locale)
   const pageNumber = parseInt(page)
   const initialDisplayPosts = posts.slice(
     POSTS_PER_PAGE * (pageNumber - 1),
@@ -43,15 +43,15 @@ export async function getStaticProps(context) {
 }
 
 export default function PostPage({ posts, initialDisplayPosts, pagination }) {
-  let { t } = useTranslation();
+  let { t } = useTranslation()
   return (
     <>
-      <PageSeo title={t("common:title")} description={t("common:description")} />
+      <PageSeo title={t('common:title')} description={t('common:description')} />
       <ListLayout
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
         pagination={pagination}
-        title={t("common:allposts")}
+        title={t('common:allposts')}
       />
     </>
   )
