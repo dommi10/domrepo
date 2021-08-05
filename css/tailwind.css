@@ -1,0 +1,282 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'IRAN Sans';
+  src: url('/static/fonts/iransans.eot');
+  src: url('/static/fonts/iransans.ttf');
+  src: url('/static/fonts/iransans.woff');
+  src: url('/static/fonts/iransans.woff2');
+}
+
+@font-face {
+  font-family: 'Tanha';
+  src: url('/static/fonts/Tanha.eot');
+  src: url('/static/fonts/Tanha.ttf');
+  src: url('/static/fonts/Tanha.woff');
+  src: url('/static/fonts/Tanha.woff2');
+}
+
+
+.remark-code-title {
+  @apply px-5 py-3 font-mono text-sm font-bold text-gray-200 bg-gray-700 rounded-t;
+}
+
+.remark-code-title + div > pre {
+  @apply mt-0 rounded-t-none;
+}
+
+.task-list-item:before {
+  @apply hidden;
+}
+
+.code-line {
+  @apply pl-4 -mx-4 border-l-4 border-gray-800;
+}
+
+.highlight-line {
+  @apply -mx-4 bg-gray-700 bg-opacity-50 border-l-4 border-primary-500;
+}
+
+.line-number::before {
+  @apply pr-4 -ml-2 text-gray-400;
+  content: attr(line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+:lang(en) { direction: ltr; }
+:lang(fa) { direction: rtl; font-family: Tanha, sans-serif; }
+
+
+
+
+.text-gray-500:lang(fa) {
+  font-size: 20px;
+}
+
+.searchicon:lang(fa) {
+  left: 10px;
+  right: unset;
+}
+
+
+.sm\:p-4:lang(fa) {
+  font-size: 19px;
+}
+
+.pt-10:lang(fa) {
+  font-size: 20px;
+}
+
+.space-x-2 > :not([hidden]) ~ :not([hidden]):lang(fa) {
+  font-size: 18px;
+  padding-right: 10px;
+}
+
+.prose > :last-child:lang(fa) {
+  font-size: 20px;
+}
+
+.prose a {
+  text-decoration: none;
+}
+
+
+
+@media (min-width: 640px) {
+  .sm\:block {
+    padding-right: 10px;
+  }
+}
+
+
+
+
+.countryname {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+
+img, video {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+
+
+
+
+@media (min-width: 640px) {
+.headerclass {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  transition: background-color .1 ease-in-out;
+  padding: 23px;
+}
+.mainclass {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 3rem;
+}
+}
+
+
+
+
+.nightmodeclass {
+  --tw-bg-opacity: 0.6;
+    background-color: rgba(229,231,235,var(--tw-bg-opacity));
+}
+
+.postslistsimages {
+  object-fit: cover;
+  margin-top: 10px!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*** Table Styles **/
+
+
+
+.table-fill {
+ background: white;
+ border-radius:3px;
+ border-collapse: collapse;
+ height: 100px;
+ margin: auto;
+ padding:5px;
+ width: 100%;
+ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+ animation: float 5s infinite;
+ margin-top: 50px;
+ margin-bottom: 50px;
+}
+
+th {
+ color:#D5DDE5;;
+ background:#1b1e24;
+ border-bottom:4px solid #9ea7af;
+ border-right: 1px solid #343a45;
+ font-size: 17px;
+ font-weight: 100;
+ padding:24px;
+ text-align:left;
+ text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+ vertical-align:middle;
+}
+
+th:first-child {
+ border-top-left-radius:3px;
+}
+
+th:last-child {
+ border-top-right-radius:3px;
+ border-right:none;
+}
+ 
+tr {
+ border-top: 1px solid #C1C3D1;
+ border-bottom-: 1px solid #C1C3D1;
+ color:#666B85;
+ font-size:16px;
+ font-weight:normal;
+ text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+
+tr:hover td {
+ background:#4E5066;
+ color:#FFFFFF;
+ border-top: 1px solid #22262e;
+}
+
+tr:first-child {
+ border-top:none;
+}
+
+tr:last-child {
+ border-bottom:none;
+}
+
+tr:nth-child(odd) td {
+ background:#EBEBEB;
+}
+
+tr:nth-child(odd):hover td {
+ background:#4E5066;
+}
+
+tr:last-child td:first-child {
+ border-bottom-left-radius:3px;
+}
+
+tr:last-child td:last-child {
+ border-bottom-right-radius:3px;
+}
+
+td {
+ background:#FFFFFF;
+ padding:15px;
+ text-align:left;
+ vertical-align:middle;
+ font-weight:300;
+ font-size:15px;
+ text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+ border-right: 1px solid #C1C3D1;
+}
+
+td:last-child {
+ border-right: 0px;
+}
+
+th.text-left {
+ text-align: left;
+}
+
+th.text-center {
+ text-align: center;
+}
+
+th.text-right {
+ text-align: right;
+}
+
+td.text-left {
+ text-align: left;
+}
+
+td.text-center {
+ text-align: center;
+}
+
+td.text-right {
+ text-align: right;
+}
+
+/*** Table Styles👆 **/
+
+/*** Bandsintown Styles👇 **/
+.bit-widget-container {
+  background: #e8e8e826;
+  padding: 20px;
+  border-radius: 5px;
+}
